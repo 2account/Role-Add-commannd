@@ -1,0 +1,29 @@
+Free To Copy
+
+( But try now and understand the code )
+
+______________________________________________
+
+const Discord = require('discord.js');
+console.log('Im Online!');
+
+const BLUE_ROLE = 'ROLE_ID';
+const RED_ROLE = 'ROLE_ID';
+const GREEN_ROLE = 'ROLE_ID';
+
+const bot = new Discord.Client();
+
+bot.on('message', (message) => {
+
+    if (message.content == '!role blue') {
+       message.member.AddRole(BLUE_ROLE);
+    }
+   else if (message.content == '!role red') {
+       message.member.AddRole(RED_ROLE);
+    }
+   else if (message.content == '!role green') {
+       message.member.AddRole(GREEN_ROLE)
+    }
+}); 
+
+bot.login('YOUR_TOKEN');
