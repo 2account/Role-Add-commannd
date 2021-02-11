@@ -16,13 +16,13 @@ const bot = new Discord.Client();
 bot.on('message', (message) => {
 
     if (message.content == '!role blue') {
-       message.member.AddRole(BLUE_ROLE);
+       message.member.roles.add(BLUE_ROLE);
     }
    else if (message.content == '!role red') {
-       message.member.AddRole(RED_ROLE);
+       message.member.roles.add(RED_ROLE);
     }
    else if (message.content == '!role green') {
-       message.member.AddRole(GREEN_ROLE)
+       message.member.roles.add(GREEN_ROLE)
     }
 }); 
 
